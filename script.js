@@ -73,6 +73,7 @@ function startBonusLevel() {
     document.querySelector('.game').style.backgroundColor = 'gold';
     cactus.style.animationDuration = '0.5s';
     burger.style.animationDuration = '0.5s';
+    backgroundMusic.playbackRate = 1.5; // Accelerate the music
 }
 
 function checkCollision() {

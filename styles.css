@@ -60,21 +60,12 @@
     animation: block 1s infinite linear;
 }
 
-#burger {
-    width: 40px;
-    height: 40px;
-    position: relative;
-    top: 110px;
-    left: 580px;
-    background-image: url("burger.png"); /* Replace with your burger image path */
-    background-size: cover; /* Adjust the background size */
-    background-position: center; /* Center the background image */
-}
 @keyframes block {
     0% {
-    left: 580px;
+        left: 580px;
     }
+
     100% {
-    left: -20px;
+        left: -40px;
     }
 }
