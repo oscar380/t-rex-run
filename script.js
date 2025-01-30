@@ -56,6 +56,7 @@ function resetGame() {
     scoreElement.textContent = `Score: ${score}`;
     cactusScored = false;
     burgerScored = false;
+    isBonusLevel = false;
     gameOverElement.style.display = 'none';
     cactus.classList.remove("cactus-animation");
     burger.classList.remove("burger-animation");
@@ -121,4 +122,25 @@ function checkCollision() {
     }
 }
 
+function saveScore(score) {
+    let scores = JSON.parse(localStorage.getItem('scores')) || [];
+    scores.push(score);
+    localStorage.setItem('scores', JSON.stringify(scores));
+    displayScores();
+}
+
+function displayScores() {
+    let scores = JSON.parse(localStorage.getItem('scores')) || [];
+    const scoreList = document.getElementById('score-list');
+    scoreList.innerHTML = '';
+    scores.forEach((score, index) => {
+        let li = document.createElement('li');
+        li.textContent = `Game ${index + 1}: ${score}`;
+        scoreList.appendChild(li);
+    });
+}
+
 let isAlive = setInterval(checkCollision, 10);
+
+// Display scores when the page loads
+displayScores();

@@ -69,3 +69,33 @@
         left: -40px;
     }
 }
+h1 {
+    color: #ffc;
+    background-color: #900;
+    font-size: 2em;
+    margin: 0;
+    margin-bottom: 7px;
+    padding: 4px;
+    font-style: italic;
+    text-align: center;
+    letter-spacing: 0.5em;
+    border-bottom-style: solid;
+    border-bottom-width: 0.5em;
+    border-bottom-color: rgb(204, 3, 0);
+}
+#score-table {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#score-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#score-list li {
+    background-color: #f0f0f0;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
