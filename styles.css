@@ -3,7 +3,7 @@
     height: 200px;
     border: 1px solid black;
     margin: auto;
-    background-image: url('old\ backround.jpeg'); /* Replace with your background image path */
+    background-image: url('backround.jpeg'); /* Replace with your background image path */
     background-size: cover; /* Adjust the background size */
     background-position: center; /* Center the background image */
 }
@@ -11,7 +11,7 @@
 #dino {
     width: 50px;
     height: 50px;
-    background-image: url('gros\ 1.jpeg');
+    background-image: url('fat-guy-removebg-preview.png');
     background-size: 50px 50px;
     position: relative;
     top: 150px;
@@ -51,7 +51,7 @@
     position: relative;
     top: 110px;
     left: 580px;
-    background-image: url("légumes.jpeg");
+    background-image: url("brocolie-removebg-preview.png");
     background-size: cover; /* Ajuste la taille de l'image pour couvrir tout l'élément */
     background-position: center; /* Centre l'image dans l'élément */  
 }
