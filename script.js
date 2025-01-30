@@ -11,6 +11,7 @@ document.body.appendChild(gameOverElement);
 let score = 0;
 let cactusScored = false; // Flag to track if the cactus has been scored
 let burgerScored = false; // Flag to track if the burger has been scored
+let isBonusLevel = false; // Flag to track if the bonus level is active
 
 function jump() {
     if (dino.classList != "jump") {
@@ -25,6 +26,9 @@ function jump() {
 function updateScore(points) {
     score += points;
     scoreElement.textContent = `Score: ${score}`;
+    if (score >= 10 && !isBonusLevel) {
+        startBonusLevel();
+    }
 }
 
 function addCatusAnimation() {
@@ -60,6 +64,15 @@ function resetGame() {
     cactus.classList.add("cactus-animation");
     burger.classList.add("burger-animation");
     isAlive = setInterval(checkCollision, 10);
+}
+function startBonusLevel() {
+    isBonusLevel = true;
+    alert("Bonus Level!");
+    // Add your bonus level logic here
+    // For example, change the background color and speed up the animations
+    document.querySelector('.game').style.backgroundColor = 'gold';
+    cactus.style.animationDuration = '0.5s';
+    burger.style.animationDuration = '0.5s';
 }
 
 function checkCollision() {
